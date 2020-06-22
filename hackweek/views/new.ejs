@@ -1,0 +1,33 @@
+<%- include("./partials/header") %>
+
+<div style="padding-top: 50px;" class="container">
+    <h1 style="text-align: center;">Add New Question</h1>
+    <div style="width: 70%; margin: 25px auto;">
+        <form action="/questions" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="name" placeholder="Question Name">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="prompt" cols="30" rows="10">Enter the question here.</textarea>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="sampleinput1" placeholder="Sample input 1">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="sampleoutput1" placeholder="Sample output 1">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="sampleinput2" placeholder="Sample input 2">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="sampleoutput2" placeholder="Sample output 2">
+            </div>
+            <div class="form-group">
+                <button style="background-color: rgb(58, 44, 83); border: none; color: aliceblue;" class="btn-lg btn-block">Submit</button>
+            </div>
+        </form>
+        <a href="/questions">Go back</a>
+    </div>
+</div>
+
+<%- include("./partials/footer") %>

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>MEC Test App</title>
+    <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+</head>
+<body>
+    <nav style="background-color: rgb(31, 21, 47);" class="navbar navbar-expand-md navbar-dark mb-4">
+        <a class="navbar-brand" href="/">Algomaniac</a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <ul class="navbar-nav">
+                  <% if(!currentUser){ %>
+                    <li class="nav-item">
+                      <a href="/login" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/register" class="nav-link">Sign Up</a>
+                    </li>
+              <% } else { %>
+                    <li class="nav-item"><a href="/rank" class="nav-link">Rankings</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Signed In As <%= currentUser.name %></a></li>
+                    <li class="nav-item">
+                      <a href="/logout" class="nav-link">Logout</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+      </nav>

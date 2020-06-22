@@ -1,0 +1,45 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/show.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="question">
+            <h3><strong><%= question.name %></strong></h3>
+            <p style="width: 80%;">
+            <%= question.prompt %>
+            </p>
+            <p class="in">Sample Input 1 : </p>
+            <div class="box"><%= question.sampleinput1 %></div>
+            <p>Sample Output 1 : </p>
+            <div class="box"><%= question.sampleoutput1 %></div>
+            <p class="in">Sample Input 2 : </p>
+            <div class="box"><%= question.sampleinput2 %></div>
+            <p>Sample Output 2 : </p>
+            <div class="box"><%= question.sampleoutput2 %></div>
+            <!-- <% if(currentUser && currentUser.username === "Admin"){ %>
+                <form action="/questions/<%= question._id %>?_method=DELETE" method="POST">
+                    <input type="submit" class="del" value="Delete">
+                </form>
+                <form action="/questions/<%= question._id %>?_method=PUT" method="POST">
+                    <input type="submit" class="edit" value="Edit">
+                </form>
+            <% } %> -->
+        </div>
+        <div class="code-area">
+            <textarea rows="20" class="input" id="code" autofocus>using namespace std;
+
+int solution(int n) {
+
+//Code Area
+
+}</textarea>
+            <br/><br/>
+            <button class="run" onclick="runTests(this)"><span>Run Code</span></button>
+            <br/><br/>
+            <span id="results"></span>
+        </div>
+    </div>
+
+<%- include("./partials/footer") %>

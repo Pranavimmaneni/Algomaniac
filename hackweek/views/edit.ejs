@@ -1,0 +1,33 @@
+<%- include("./partials/header") %>
+
+<div style="padding-top: 50px;" class="container">
+    <h1 style="text-align: center;">Add New Question</h1>
+    <div style="width: 70%; margin: 25px auto;">
+        <form action="/questions" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="question[name]" value="<%= question.name %>">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="question[prompt]" cols="30" rows="10"><%= question.prompt %></textarea>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="question[sampleinput1]" value="<%= question.sampleinput1 %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="question[sampleoutput1]" value="<%= question.sampleoutput1 %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="question[sampleinput2]" value="<%= question.sampleinput2 %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="question[sampleoutput2]" value="<%= question.sampleoutput2 %>">
+            </div>
+            <div class="form-group">
+                <button style="background-color: rgb(58, 44, 83); border: none; color: aliceblue;" class="btn-lg btn-block">Submit</button>
+            </div>
+        </form>
+        <a href="/questions">Go back</a>
+    </div>
+</div>
+
+<%- include("./partials/footer") %>

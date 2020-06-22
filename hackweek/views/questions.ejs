@@ -1,0 +1,24 @@
+<%- include("./partials/header") %>
+
+<header class="container">
+    <div class="jumbotron" style="background-color:rgb(58, 44, 83);">
+        <h1>Welcome to AlgoManiac</h1>
+        <p>Pick a Question!</p>
+        <% if(currentUser && currentUser.username === "Admin"){ %>
+        <a href="/questions/new">Add New Question</a>
+        <% } %>
+    </div>
+    <% questions.forEach(function(question){ %>
+    <form action="questions/<%= question._id %>">
+        <button class="ques" type="submit"><span><%= question.name %></span></button>
+    </form>
+    <% }); %>
+    <!-- <form action="/show">
+        <button class="ques" type="submit"><span>Question 2 : Last Man Standing</span></button>
+    </form>
+    <form action="/show">
+        <button class="ques" type="submit"><span>Question 3 : Thanos Sort</span></button>
+    </form> -->
+</header>
+
+<%- include("./partials/footer") %>
