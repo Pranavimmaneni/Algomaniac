@@ -1,0 +1,67 @@
+body {
+  background-color: rgb(45, 34, 66);
+  color: aliceblue;
+}
+
+.ques {
+  border-radius: 4px;
+  background-color: rgb(58, 44, 83);
+  border: none;
+  color: aliceblue;
+  text-align: left;
+  font-size: 28px;
+  padding-left: 20px;
+  width: 500px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.ques span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.ques span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.ques:hover span {
+  padding-right: 25px;
+}
+
+.ques:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.rank-items {
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 75%;
+}
+
+.rank-items td, .rank-items th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.rank-items tr{
+  background-color: rgb(58, 44, 83);
+}
+
+.rank-items th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+}
