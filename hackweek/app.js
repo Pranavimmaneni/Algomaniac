@@ -10,7 +10,11 @@ var Quesion = require("./models/questions");
 var indexRoutes = require("./routes/index");
 var quesRoutes = require("./routes/questions");
 
-mongoose.connect("mongodb://127.0.0.1:27017/test_app",{useNewUrlParser: true,useUnifiedTopology: true});
+mongoose.connect(process.env.DATAURL,{ useNewUrlParser: true , useUnifiedTopology: true}).then(() => {
+    console.log("Connected to DB");
+}).catch(err => {
+    console.log("ERROR:",err.message);
+});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));
@@ -48,6 +52,6 @@ function isLoggedIn(req,res,next){
     res.redirect("/login");
 }
 
-app.listen(3000,function(){
-    console.log("Started");
-});
+app.listen(process.env.PORT,process.env.IP, function(){
+    console.log("Server has started!");
+ });
