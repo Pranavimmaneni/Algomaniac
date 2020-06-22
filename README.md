@@ -1,4 +1,4 @@
-# [Algomaniac](https://mecalgomaniac.herokuapp.com/login)
+# [Algomaniac](https://mecalgomaniac.herokuapp.com/)
 <i>Disclaimer: We are yet to integrate the code execution engine along with a few formatting plugins</i>
 
 Coding tests are used by more and more companies these days during the recruitment of software developers. Websites like HackerRank, Codility, etc. help companies to administer these tests and score the candidates based on the performance of their code when run against some test cases. 
