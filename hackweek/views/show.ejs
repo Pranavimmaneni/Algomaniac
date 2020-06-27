@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/stylesheets/show.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js"></script>
 </head>
 
 <body>
@@ -18,28 +19,32 @@
             <div class="box"><%= question.sampleinput2 %></div>
             <p>Sample Output 2 : </p>
             <div class="box"><%= question.sampleoutput2 %></div>
-            <!-- <% if(currentUser && currentUser.username === "Admin"){ %>
-                <form action="/questions/<%= question._id %>?_method=DELETE" method="POST">
-                    <input type="submit" class="del" value="Delete">
-                </form>
-                <form action="/questions/<%= question._id %>?_method=PUT" method="POST">
-                    <input type="submit" class="edit" value="Edit">
-                </form>
-            <% } %> -->
         </div>
         <div class="code-area">
-            <textarea rows="20" class="input" id="code" autofocus>using namespace std;
+            <div id="editor">#include &lt;stdio.h&gt;
 
-int solution(int n) {
+int solution(int params){
+    
+    //Enter solution here
 
-//Code Area
+    return 0;
+}
 
-}</textarea>
-            <br/><br/>
+int main(){
+
+    return 0;
+}   </div>
+
+   <br/><br/>
             <button class="run" onclick="runTests(this)"><span>Run Code</span></button>
             <br/><br/>
             <span id="results"></span>
         </div>
     </div>
+    <script type="text/javascript">
+        var e = ace.edit("editor");
+        e.getSession().setMode("ace/mode/c_cpp");
+        e.setTheme("ace/theme/solarized_dark");
+    </script>
 
 <%- include("./partials/footer") %>
